@@ -242,4 +242,5 @@ Este projeto foi elaborado como parte da avaliação académica na Universidade.
 ---
 *Última atualização: Maio de 2026*
 #   F r o n t E n d _ P 2  
+ #   F r o n t E n d _ P 2  
  
