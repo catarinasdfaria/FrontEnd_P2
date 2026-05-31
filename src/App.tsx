@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 import "./styles/theme.css";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 export const ThemeContext = createContext<any>(null);
@@ -18,7 +18,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
       <div className={`app-root container-fluid text-center theme-${theme}`} data-bs-theme={theme}>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<LandingPage/>}/>
             <Route path="/login" element={<Login/>} />
@@ -27,7 +27,7 @@ function App() {
             <Route path="/content" element={<ProtectedRoute><Content/></ProtectedRoute>}/>
             <Route path="/dashboard" element={<ProtectedRoute requireAdmin={true}><Dashboard/></ProtectedRoute>}/>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     </ThemeContext.Provider>
   )
