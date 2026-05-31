@@ -44,10 +44,6 @@ Este repositório contém a aplicação cliente (Frontend) para a plataforma **T
 
 Cria um ficheiro `.env` na pasta raiz do frontend (`FrontEnd/.env`) para definir o endereço da API do teu backend.
 
-> [!IMPORTANT]
-> **Atenção ao Nome da Chave:**
-> O código do frontend lê especificamente a variável **`VITE_API_BASE_URL`**. Se utilizares outro nome (como `VITE_API_URL`), a aplicação não a detetará e tentará comunicar por padrão com `http://localhost:3000`.
-
 * **Cenário A: Para desenvolvimento local (com backend corrido na tua máquina):**
   ```env
   VITE_API_BASE_URL=http://localhost:3000
